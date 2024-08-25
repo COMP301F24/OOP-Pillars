@@ -18,26 +18,26 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "prgoodwin"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;prgoodwin&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/COMP301F24/u02-encapsulation.git",
-    "accountId": "103c78f0-1f45-4b0d-81aa-95a3d768850f"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/COMP301F24/u02-encapsulation.git&quot;,
+    &quot;accountId&quot;: &quot;103c78f0-1f45-4b0d-81aa-95a3d768850f&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -61,7 +61,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "p1solution",
+    "git-widget-placeholder": "p2solution",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "C:/Users/prair/OneDrive/Documents/gitlab/UNC/COMP301/f24/Code/u02p1-ShapeCalculator/ShapeCalculator/src/test/java/ShapeMaker",
     "project.structure.last.edited": "Modules",
@@ -115,11 +115,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainTest.triangle_area" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MainTest.point_distance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ShapeCalculator" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MainTest" />
-      <option name="METHOD_NAME" value="triangle_area" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ShapeMaker.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ShapeMaker" />
+      <option name="MAIN_CLASS_NAME" value="ShapeMaker.MainTest" />
+      <option name="METHOD_NAME" value="point_distance" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -138,10 +144,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.MainTest (1)" />
+        <item itemvalue="JUnit.MainTest.point_distance" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.MainTest" />
         <item itemvalue="JUnit.MainTest.triangle_category" />
-        <item itemvalue="JUnit.MainTest.triangle_area" />
       </list>
     </recent_temporary>
   </component>

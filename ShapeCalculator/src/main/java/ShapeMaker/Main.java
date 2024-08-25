@@ -1,5 +1,8 @@
 package ShapeMaker;
 
+import ShapeMaker.Shapes.Point;
+import ShapeMaker.Shapes.Triangle;
+
 import java.util.Scanner;
 
 public class Main {
@@ -58,74 +61,16 @@ public class Main {
         double cx = Double.parseDouble(tokens[4]);
         double cy = Double.parseDouble(tokens[5]);
 
-        String category = triangle_category(ax, ay, bx, by, cx, cy);
-        double area = triangle_area(ax, ay, bx, by, cx, cy);
-        System.out.print("This triangle has an area of " + area);
-        System.out.print(" and is a " + category + " triangle.");
+        Point a = new Point(ax, ay);
+        Point b = new Point(bx, by);
+        Point c = new Point(cx, cy);
+
+        Triangle myTri = new Triangle(a, b, c);
+        System.out.println(myTri);
 
     }
-
-
-    /**
-     * Calculates whether triangle is equilateral, isosceles, or scalene
-     *
-     * @param ax - point 1 x
-     * @param ay - point 1 y
-     * @param bx - point 2 x
-     * @param by - point 2 y
-     * @param cx - point 3 x
-     * @param cy - point 3 y
-     * @return string representing the category
-     */
-    public static String triangle_category(double ax, double ay, double bx, double by, double cx, double cy) {
-
-        double side_ab = point_distance(ax, ay, bx, by);
-        double side_bc = point_distance(bx, by, cx, cy);
-        double side_ca = point_distance(cx, cy, ax, ay);
-
-        if ((side_ab == side_bc) && (side_bc == side_ca)) {
-            return "equilateral";
-        } else if ((side_ab == side_bc) || (side_ab == side_ca) || (side_bc == side_ca)) {
-            return "isosceles";
-        } else {
-            return "scalene";
-        }
-    }
-
-    /**
-     * Method calculating the area of the triangle using Heron's Formula:
-     * <a href="https://en.wikipedia.org/wiki/Heron%27s_formula">Wikipedia</a>
-     *
-     * @param ax - point 1 x
-     * @param ay - point 1 y
-     * @param bx - point 2 x
-     * @param by - point 2 y
-     * @param cx - point 3 x
-     * @param cy - point 3 y
-     * @return area
-     */
-    public static double triangle_area(double ax, double ay,double bx, double by,double cx, double cy) {
-        double side_ab = point_distance(ax, ay, bx, by);
-        double side_bc = point_distance(bx, by, cx, cy);
-        double side_ca = point_distance(cx, cy, ax, ay);
-
-        double s = (side_ab + side_bc + side_ca) / 2.0;
-        return Math.sqrt(s * (s - side_ab) * (s - side_bc) * (s - side_ca));
-
-    }
-
-    /**
-     * Utility method that calculates the distance between two ordered pairs of points
-     *
-     * @param x1 point 1 x
-     * @param y1 point 1 y
-     * @param x2 point 2 x
-     * @param y2 point 2 y
-     * @return distance
-     */
-    public static double point_distance(double x1, double y1, double x2, double y2) {
-        return Math.sqrt(((x1 - x2) * (x1 - x2)) + ((y1 - y2) * (y1 - y2)));
-    }
-
 
 }
+
+
+
