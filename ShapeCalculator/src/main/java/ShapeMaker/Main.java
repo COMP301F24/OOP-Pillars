@@ -79,7 +79,17 @@ public class Main {
      */
     public static String triangle_category(double ax, double ay, double bx, double by, double cx, double cy) {
 
-        return "";
+        double side_ab = point_distance(ax, ay, bx, by);
+        double side_bc = point_distance(bx, by, cx, cy);
+        double side_ca = point_distance(cx, cy, ax, ay);
+
+        if ((side_ab == side_bc) && (side_bc == side_ca)) {
+            return "equilateral";
+        } else if ((side_ab == side_bc) || (side_ab == side_ca) || (side_bc == side_ca)) {
+            return "isosceles";
+        } else {
+            return "scalene";
+        }
     }
 
     /**
@@ -95,7 +105,12 @@ public class Main {
      * @return area
      */
     public static double triangle_area(double ax, double ay,double bx, double by,double cx, double cy) {
-        return -1;
+        double side_ab = point_distance(ax, ay, bx, by);
+        double side_bc = point_distance(bx, by, cx, cy);
+        double side_ca = point_distance(cx, cy, ax, ay);
+
+        double s = (side_ab + side_bc + side_ca) / 2.0;
+        return Math.sqrt(s * (s - side_ab) * (s - side_bc) * (s - side_ca));
 
     }
 
