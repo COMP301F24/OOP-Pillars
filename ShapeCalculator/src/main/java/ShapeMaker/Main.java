@@ -58,8 +58,8 @@ public class Main {
         double cx = Double.parseDouble(tokens[4]);
         double cy = Double.parseDouble(tokens[5]);
 
-        String category = triangle_category(ax, ay, bx, by, cx, cy);
-        double area = triangle_area(ax, ay, bx, by, cx, cy);
+        String category = calculateTriangleCategory(ax, ay, bx, by, cx, cy);
+        double area = calculateTriangleArea(ax, ay, bx, by, cx, cy);
         System.out.print("This triangle has an area of " + area);
         System.out.print(" and is a " + category + " triangle.");
 
@@ -77,7 +77,7 @@ public class Main {
      * @param cy - point 3 y
      * @return string representing the category
      */
-    public static String triangle_category(double ax, double ay, double bx, double by, double cx, double cy) {
+    public static String calculateTriangleCategory(double ax, double ay, double bx, double by, double cx, double cy) {
 
         return "";
     }
@@ -94,7 +94,7 @@ public class Main {
      * @param cy - point 3 y
      * @return area
      */
-    public static double triangle_area(double ax, double ay,double bx, double by,double cx, double cy) {
+    public static double calculateTriangleArea(double ax, double ay, double bx, double by, double cx, double cy) {
         return -1;
 
     }
@@ -108,7 +108,7 @@ public class Main {
      * @param y2 point 2 y
      * @return distance
      */
-    public static double point_distance(double x1, double y1, double x2, double y2) {
+    public static double calculatePointDistance(double x1, double y1, double x2, double y2) {
         return Math.sqrt(((x1 - x2) * (x1 - x2)) + ((y1 - y2) * (y1 - y2)));
     }
 
