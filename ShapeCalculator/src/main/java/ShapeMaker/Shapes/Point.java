@@ -22,7 +22,7 @@ public class Point {
      * @param other : the point to measure against.
      * @return distance
      */
-    public double point_distance(Point other) {
+    public double distanceTo(Point other) {
         return Math.sqrt(((this.x - other.getX()) * (this.x - other.getX())) + ((this.y - other.getY()) * (this.y - other.getY())));
     }
 

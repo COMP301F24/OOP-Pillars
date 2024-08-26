@@ -36,9 +36,9 @@ class MainTest {
         Point b = new Point(0,5);
         Point c = new Point(0,-3);
         Point d = new Point(-4,0);
-        assertEquals(5,a.point_distance(b), "Expected 5.  Straight line from origin to 0,5");
-        assertEquals(0,a.point_distance(a), "Expected 0. origin to origin");
-        assertEquals(5,c.point_distance(d), "Expected 5. 3,4,5 right triangle at (0,-3) (0,0), (-4,0)");
+        assertEquals(5,a.distanceTo(b), "Expected 5.  Straight line from origin to 0,5");
+        assertEquals(0,a.distanceTo(a), "Expected 0. origin to origin");
+        assertEquals(5,c.distanceTo(d), "Expected 5. 3,4,5 right triangle at (0,-3) (0,0), (-4,0)");
 
     }
 }

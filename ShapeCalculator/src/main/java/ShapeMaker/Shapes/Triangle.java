@@ -19,9 +19,9 @@ public class Triangle {
      */
 
     public double getArea() {
-        double side_ab = this.a.point_distance(this.b);
-        double side_bc = this.b.point_distance(this.c);
-        double side_ca = this.c.point_distance(this.a);
+        double side_ab = this.a.distanceTo(this.b);
+        double side_bc = this.b.distanceTo(this.c);
+        double side_ca = this.c.distanceTo(this.a);
 
         double s = (side_ab + side_bc + side_ca) / 2.0;
         return Math.sqrt(s * (s - side_ab) * (s - side_bc) * (s - side_ca));
@@ -35,9 +35,9 @@ public class Triangle {
      */
     public String getCategory() {
 
-        double side_ab = this.a.point_distance(this.b);
-        double side_bc = this.b.point_distance(this.c);
-        double side_ca = this.c.point_distance(this.a);
+        double side_ab = this.a.distanceTo(this.b);
+        double side_bc = this.b.distanceTo(this.c);
+        double side_ca = this.c.distanceTo(this.a);
 
         if ((side_ab == side_bc) && (side_bc == side_ca)) {
             return "equilateral";
