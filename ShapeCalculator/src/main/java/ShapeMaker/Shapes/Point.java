@@ -27,5 +27,10 @@ public class Point {
         return Math.sqrt(((this.x - other.getX()) * (this.x - other.getX())) + ((this.y - other.getY()) * (this.y - other.getY())));
     }
 
+    @Override
+    public String toString(){
+        return "("+this.x + "," + this.y+")";
+    }
+
 
 }

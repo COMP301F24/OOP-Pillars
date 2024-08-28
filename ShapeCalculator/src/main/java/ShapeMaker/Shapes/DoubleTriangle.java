@@ -1,21 +1,26 @@
 package ShapeMaker.Shapes;
 
 
-public class DoubleTriangle {
+public class DoubleTriangle implements IShape {
     public Point a;
     public Point b;
     public Point c;
 
 
     /**
-     * @param a
-     * @param b
-     * @param c
+     * @param a a point
+     * @param b a point
+     * @param c a point
      */
     public DoubleTriangle(double ax, double ay, double bx, double by, double cx, double cy) {
         this.a = new Point(ax, ay);
         this.b = new Point(bx,by);
         this.c = new Point(cx,cy);
+    }
+
+    @Override
+    public void setCenterPoint() {
+        //TODO Later
     }
 
     /**

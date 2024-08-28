@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"ShapeMaker","l":"Main"}];updateSearchResults();
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"ShapeMaker.Shapes","l":"DoubleTriangle"},{"p":"ShapeMaker","l":"Main"},{"p":"ShapeMaker.Shapes","l":"Point"},{"p":"ShapeMaker.Shapes","l":"PointTriangle"},{"p":"ShapeMaker.Shapes","l":"Square"}];updateSearchResults();

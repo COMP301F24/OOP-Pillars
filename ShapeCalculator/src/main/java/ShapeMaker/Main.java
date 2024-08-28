@@ -1,8 +1,6 @@
 package ShapeMaker;
 
-import ShapeMaker.Shapes.DoubleTriangle;
-import ShapeMaker.Shapes.Point;
-import ShapeMaker.Shapes.PointTriangle;
+import ShapeMaker.Shapes.*;
 
 import java.util.Scanner;
 
@@ -13,10 +11,13 @@ public class Main {
      */
     public static void main(String[] args) {
         //userInteraction();
-        encapsulationDoubleExample();
+        //encapsulationDoubleExample();
         encapsulationPointExample();
         //transposeExample();
         //roundingExample();
+
+        Square s = new Square(new Point(5,3), -10);
+        System.out.println(s);
 
     }
 
@@ -104,7 +105,7 @@ public class Main {
         Point p3 = new Point(15, -2);
         Point p4 = new Point(-3, -8);
 
-        PointTriangle t1 = new PointTriangle(p1, p2, p3);
+        PointTriangle t1 = new PointTriangle(p1, p2,p3);
         PointTriangle t2 = new PointTriangle(p2, p3, p4);
 
         System.out.println("Perimeter of T1 = " + t1.getPerimeter());
@@ -151,8 +152,10 @@ public class Main {
     }
 
     public static void roundingExample(){
+        double a = 0.1;
+        double b = 0.3;
 
-
+        System.out.println(((a+a+a)==b));
 
     }
 

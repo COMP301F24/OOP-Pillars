@@ -1,15 +1,16 @@
 package ShapeMaker.Shapes;
 
-public class PointTriangle {
+public class PointTriangle implements IShape{
+
     public Point a;
     public Point b;
     public Point c;
 
 
     /**
-     * @param a
-     * @param b
-     * @param c
+     * @param a a point
+     * @param b a point
+     * @param c a point
      */
     public PointTriangle(Point a, Point b, Point c) {
         this.a = a;
@@ -69,5 +70,9 @@ public class PointTriangle {
         double side_ca = this.c.distanceTo(this.a);
 
         return side_ab + side_bc + side_ca;
+    }
+
+    public void setCenterPoint(){
+        //TODO LATER
     }
 }
