@@ -14,7 +14,7 @@ public class Main {
     public static void main(String[] args) {
         //userInteraction();
         encapsulationDoubleExample();
-        encapsulationExample();
+        encapsulationPointExample();
         //transposeExample();
         //roundingExample();
 
@@ -96,7 +96,7 @@ public class Main {
 
         System.out.println("Perimeter  of T1 = " + t1.getPerimeter());
     }
-    public static void encapsulationExample(){
+    public static void encapsulationPointExample(){
 
 
         Point p1 = new Point(5, 5);
