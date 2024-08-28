@@ -1,11 +1,17 @@
 package ShapeMaker.Shapes;
 
-public class Triangle {
-    private Point a;
-    private Point b;
-    private Point c;
+public class PointTriangle {
+    public Point a;
+    public Point b;
+    public Point c;
 
-    public Triangle(Point a, Point b, Point c){
+
+    /**
+     * @param a
+     * @param b
+     * @param c
+     */
+    public PointTriangle(Point a, Point b, Point c) {
         this.a = a;
         this.b = b;
         this.c = c;
@@ -49,11 +55,19 @@ public class Triangle {
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         String category = this.getCategory();
         double area = this.getArea();
 
-       return "This triangle has an area of " + area + " and is a " + category + " triangle.";
+        return "This triangle has an area of " + area + " and is a " + category + " triangle.";
 
+    }
+
+    public double getPerimeter(){
+        double side_ab = this.a.distanceTo(this.b);
+        double side_bc = this.b.distanceTo(this.c);
+        double side_ca = this.c.distanceTo(this.a);
+
+        return side_ab + side_bc + side_ca;
     }
 }

@@ -1,7 +1,8 @@
 package ShapeMaker;
 
+import ShapeMaker.Shapes.DoubleTriangle;
 import ShapeMaker.Shapes.Point;
-import ShapeMaker.Shapes.Triangle;
+import ShapeMaker.Shapes.PointTriangle;
 
 import java.util.Scanner;
 
@@ -11,6 +12,15 @@ public class Main {
      * Main method used for user interaction
      */
     public static void main(String[] args) {
+        //userInteraction();
+        encapsulationDoubleExample();
+        encapsulationExample();
+        //transposeExample();
+        //roundingExample();
+
+    }
+
+    private static void userInteraction() {
         //TODO: ERROR HANDLING
         Scanner s = new Scanner(System.in);
         String response; //variable for reading input
@@ -65,8 +75,84 @@ public class Main {
         Point b = new Point(bx, by);
         Point c = new Point(cx, cy);
 
-        Triangle myTri = new Triangle(a, b, c);
+        PointTriangle myTri = new PointTriangle(a, b, c);
         System.out.println(myTri);
+
+    }
+
+    public static void transposeExample(){
+        Point p1 = new Point(5, 5);
+        Point p2 = new Point(10, 15);
+        Point p3 = new Point(15, -2);
+
+        PointTriangle t1 = new PointTriangle(p1, p2, p3);
+
+
+        System.out.println("Perimeter of T1 = " + t1.getPerimeter());
+
+        t1.a.x += 5;
+        t1.b.x += 5;
+        t1.c.x += 5;
+
+        System.out.println("Perimeter  of T1 = " + t1.getPerimeter());
+    }
+    public static void encapsulationExample(){
+
+
+        Point p1 = new Point(5, 5);
+        Point p2 = new Point(10, 15);
+        Point p3 = new Point(15, -2);
+        Point p4 = new Point(-3, -8);
+
+        PointTriangle t1 = new PointTriangle(p1, p2, p3);
+        PointTriangle t2 = new PointTriangle(p2, p3, p4);
+
+        System.out.println("Perimeter of T1 = " + t1.getPerimeter());
+        System.out.println("Perimeter of T2 = " + t2.getPerimeter());
+
+        t1.a.x += 5;
+        t1.b.x += 5;
+        t1.c.x += 5;
+
+        t2.a.x += 5;
+        t2.b.x += 5;
+        t2.c.x += 5;
+
+
+        System.out.println("Perimeter of T1 = " + t1.getPerimeter());
+        System.out.println("Perimeter of T2 = " + t2.getPerimeter());
+    }
+
+    public static void encapsulationDoubleExample(){
+
+
+        Point p1 = new Point(5, 5);
+        Point p2 = new Point(10, 15);
+        Point p3 = new Point(15, -2);
+        Point p4 = new Point(-3, -8);
+
+        DoubleTriangle t1 = new DoubleTriangle(5,5,10,15,15,-2);
+        DoubleTriangle t2 = new DoubleTriangle(10,15,15,-2,-3,-8);
+
+        System.out.println("Perimeter of T1 = " + t1.getPerimeter());
+        System.out.println("Perimeter of T2 = " + t2.getPerimeter());
+
+        t1.a.x += 5;
+        t1.b.x += 5;
+        t1.c.x += 5;
+
+        t2.a.x += 5;
+        t2.b.x += 5;
+        t2.c.x += 5;
+
+
+        System.out.println("Perimeter of T1 = " + t1.getPerimeter());
+        System.out.println("Perimeter of T2 = " + t2.getPerimeter());
+    }
+
+    public static void roundingExample(){
+
+
 
     }
 
