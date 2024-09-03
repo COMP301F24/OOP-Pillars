@@ -1,6 +1,6 @@
 package ShapeMaker.Shapes;
 
-public class Circle extends AShape{
+public class Circle {
     private Point center;
     private double radius;
 

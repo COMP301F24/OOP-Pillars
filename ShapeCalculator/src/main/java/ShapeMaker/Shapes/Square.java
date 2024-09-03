@@ -1,11 +1,13 @@
 package ShapeMaker.Shapes;
 
-public class Square extends AShape{
+public class Square {
     private double side;
     private Point topLeft;
 
     public Square(double side, Point topLeft){
-        this.setSide(side);
+        if(side <= 0){
+            throw new IllegalArgumentException("INCORRECT!!");
+        }
         this.topLeft = topLeft;
     }
 

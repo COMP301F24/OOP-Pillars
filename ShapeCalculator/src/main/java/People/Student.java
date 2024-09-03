@@ -1,13 +1,18 @@
 package People;
 
-public class Student extends Person{
+
+public class Student {
+    private String name;
     private int credits;
 
     public Student(String name) {
-        super(name);
         credits = 0;
+        this.name = name;
     }
 
+    public String getName() {
+        return name;
+    }
 
     public int getCredits() {
         return credits;

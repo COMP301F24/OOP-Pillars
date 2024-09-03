@@ -1,11 +1,16 @@
 package People;
 
-public class Professor extends Person {
+public class Professor {
+    private String name;
     private int status;
 
     public Professor(String name) {
-        super(name);
         status = 0;
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public void promote() {
@@ -25,4 +30,3 @@ public class Professor extends Person {
         }
     }
 }
-
