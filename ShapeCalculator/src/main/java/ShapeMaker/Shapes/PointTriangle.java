@@ -1,6 +1,6 @@
 package ShapeMaker.Shapes;
 
-public class PointTriangle implements IShape{
+public class PointTriangle extends AShape{
 
     public Point a;
     public Point b;

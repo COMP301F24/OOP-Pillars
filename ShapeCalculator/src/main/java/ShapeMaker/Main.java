@@ -1,6 +1,9 @@
 package ShapeMaker;
 
-import ShapeMaker.Shapes.*;
+import ShapeMaker.Shapes.DoubleTriangle;
+import ShapeMaker.Shapes.Point;
+import ShapeMaker.Shapes.PointTriangle;
+import ShapeMaker.Shapes.Square;
 
 import java.util.Scanner;
 
@@ -11,13 +14,14 @@ public class Main {
      */
     public static void main(String[] args) {
         //userInteraction();
-        //encapsulationDoubleExample();
-        encapsulationPointExample();
+        encapsulationDoubleExample();
+        //encapsulationPointExample();
         //transposeExample();
         //roundingExample();
 
-        Square s = new Square(new Point(5,3), -10);
+        Square s = new Square( -10, new Point(5,3));
         System.out.println(s);
+
 
     }
 
@@ -155,8 +159,18 @@ public class Main {
         double a = 0.1;
         double b = 0.3;
 
-        System.out.println(((a+a+a)==b));
+        System.out.println((a+a+a)==b);
 
+    }
+
+    public static double calculateArea(DoubleTriangle triangle){
+        return triangle.getArea();
+    }
+    public static double calculateArea(PointTriangle triangle){
+        return triangle.getArea();
+    }
+    public static double calculateArea(Square square){
+        return square.getArea();
     }
 
 }
