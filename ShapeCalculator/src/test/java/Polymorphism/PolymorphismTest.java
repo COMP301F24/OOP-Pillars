@@ -12,4 +12,23 @@ class PolymorphismTest {
 
     }
 
+    @Test
+    void pollEv1(){
+        assertEquals("foobar", Main.pollEv1());
+    }
+
+    @Test
+    void pollEv3(){
+        try {
+            Main.pollEv3();
+        }catch(Exception e){
+            assertTrue(e instanceof ClassCastException);
+        }
+    }
+
+    @Test
+    void pollEv5(){
+        Main.pollEv5();
+    }
+
 }

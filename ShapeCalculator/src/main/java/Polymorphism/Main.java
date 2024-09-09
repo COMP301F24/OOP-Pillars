@@ -89,10 +89,10 @@ public class Main {
     }
 
     public static void pollEv5(){
-//        Person chloe = new Professor("chloe");
-//        chloe.promote(); // Promote to "Associate"
-//        chloe.promote(); // Promote to "Full"
-//        System.out.println(chloe.getStatus());
+        Person chloe = new Professor("chloe");
+        ((Professor)chloe).promote(); // Promote to "Associate"
+        ((Professor)chloe).promote(); // Promote to "Full"
+        System.out.println(((Professor)chloe).getStatus());
 
     }
 
