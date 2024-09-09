@@ -9,6 +9,7 @@ class PolymorphismTest {
 
     @Test
     void test_example1() {
+
     }
 
 }

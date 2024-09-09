@@ -7,6 +7,9 @@ public class Main {
         Professor prairie1 = new Professor("prairie");
         Person prairie2 =  prairie1;
 
+        Professor prairie3 = new Professor("prairie");
+        Person prairie4 = (Person) prairie1;
+
     }
 
     public static String example1(){
@@ -82,6 +85,14 @@ public class Main {
 
         Student prairie3 = (Student) prairie;// 3)
 
+
+    }
+
+    public static void pollEv5(){
+//        Person chloe = new Professor("chloe");
+//        chloe.promote(); // Promote to "Associate"
+//        chloe.promote(); // Promote to "Full"
+//        System.out.println(chloe.getStatus());
 
     }
 
