@@ -68,7 +68,8 @@ Now the error should be gone.
 ## Step 3: Rock
 1.	Create a new class called Rock, just like you did before.  
 2.	This time, we need to make it a subclass of ```Hand```.  In the class declaration, add ```extends Hand```.
-3.	You see the same error!  This time you should know how to solve it.  This time, we don't need parameters in the constructor.  The name will always be "rock" and the string will always be an ascii picture.  The only thing you need now, is an ascii representation of a rock hand.  Here you go!
+3.	You see the same error! This time you should know how to solve it.  
+         - We are going to practice overloading the constructor.  Make two constructors, one that takes in the fields as parameters, and one that does not.  For the one that does not, The name will always be "rock" and the string will always be an ascii picture.  Make sure that you are calling one from the other using the ```this``` keyword.  The only thing you need now, is an ascii representation of a rock hand.  Here you go!
 ```
      _.-.-.-.
     ;_|_|_|_|_
