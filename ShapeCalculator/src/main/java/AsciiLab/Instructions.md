@@ -59,6 +59,7 @@ We are working towards making a Rock, Paper, Scissors game.  In order to do that
     ```
 
 Now the error should be gone.
+
 6. Finally, set the ```name``` instance variable to the ```name``` parameter.
 7. Next, we need to make a ```toString()```.  By default, it will use the one defined in the ```Ascii``` class.  However, we also want to print out the ```name``` of our Hand.  Write your own ```toString()``` method that prints out the ```name``` of the hand on its own line, and then the ```ascii``` string on the next line.  Feel free to add formatting to the name to make it look pretty. 
 8. It's an Override method so don't forget the ```@Override``` tag.
@@ -67,21 +68,36 @@ Now the error should be gone.
 ## Step 3: Rock
 1.	Create a new class called Rock, just like you did before.  
 2.	This time, we need to make it a subclass of ```Hand```.  In the class declaration, add ```extends Hand```.
-3.	You see the same error!  This time you should know how to solve it.  The only thing you need now, is an ascii representation of a rock hand.  Here you go!
-
+3.	You see the same error! This time you should know how to solve it.  
+         - We are going to practice overloading the constructor.  Make two constructors, one that takes in the fields as parameters, and one that does not.  For the one that does not, The name will always be "rock" and the string will always be an ascii picture.  Make sure that you are calling one from the other using the ```this``` keyword.  The only thing you need now, is an ascii representation of a rock hand.  Here you go!
+```
      _.-.-.-.
     ;_|_|_|_|_
     |_|_|\__  \
     |    . '  |
     |   (    /
     \______/
+```
 4.	Now you have to turn it into something that can actually print correctly.  Remember that back slashes ```"\"``` are special escape characters that let us do hidden formatting.  They won’t print. Instead, we need to have a double backslash ```"\\"``` for it to print correctly.  You also need a new line character ```"\n"``` at the end of each line.  Remember that you can concatenate strings using the + operator.  Create a string that will print correctly (leaving the lines separated), and pass it to super along with the hand’s name.
 
+5.  Create a new test in the test class so that you can run it easily.  For now, just print out the hand and visually inspect that it looks right. Since there is no assertEquals yet, it should pass automatically.  Once you are happy with how it looks, copy the following test into your code to make sure it is correct.  If it fails, pay special attention to the number of spaces at the beginning and end of each line.
+
+          @Test
+          public void rockTest(){
+              //assertEquals(expected, actual);
+              Hand rock = new Rock();
+              System.out.println(rock);
+              String expected = " _.-.-.-.\n;_|_|_|_|_\n|_|_|\\__  \\\n|    . '  |\n|   (    /\n \\______/";
+      
+              assertEquals(expected, rock.getAscii());
+          }
+
+    
 ## Step 4: Paper, Scissors
 1. Repeat the instructions from ```Rock``` to make ```Paper``` and ```Scissors```.  
-2. If you'd like, you can make a main method and try printing your objects with ```System.out.println``` to see how they look printed out.  Pay special attention to the number of spaces at the beginning and end of each line.
+2. If you'd like, you can make tests and try printing your objects just like you did before.  
 
-   3. Here are the ascii strings:
+3. Here are the ascii strings:
 
 ```
         _______
@@ -106,43 +122,29 @@ Now the error should be gone.
 ```
 
 
+4.  Here are the tests!
 
-## Testing
-
-Now that you are an expert in printing, it’s time to see if it is correct.  Copy the following tests into your own code:
-
-
-    @Test
-    public void rockTest(){
-        //assertEquals(expected, actual);
-        Hand rock = new Rock();
-        System.out.println(rock);
-        String expected = " _.-.-.-.\n;_|_|_|_|_\n|_|_|\\__  \\\n|    . '  |\n|   (    /\n \\______/";
-
-        assertEquals(expected, rock.getAscii());
-    }
-
-    @Test
-    public void paperTest(){
-        //assertEquals(expected, actual);
-        Hand paper = new Paper();
-        System.out.println(paper);
-        String expected = "        _______\n  ____(____     \\\n (________       |\n(_________       |\n (________       |\n  (___________  /";
-        assertEquals(expected, paper.getAscii());
-    }
-
-    @Test
-    public void scissorsTest(){
-        //assertEquals(expected, actual);
-        Hand scissors = new Scissors();
-        System.out.println(scissors);
-        String expected = "    .-.\n    | |    / )\n    | |   / /\n    | |  / /\n _.-| |_/ /\n; \\( \\   /\n|\\_)\\ \\  |\n|    ) \\ |\n|   (    /\n \\______/";
-        assertEquals(expected, scissors.getAscii());
-    }
+          @Test
+          public void paperTest(){
+              //assertEquals(expected, actual);
+              Hand paper = new Paper();
+              System.out.println(paper);
+              String expected = "        _______\n  ____(____     \\\n (________       |\n(_________       |\n (________       |\n  (___________  /";
+              assertEquals(expected, paper.getAscii());
+          }
+      
+          @Test
+          public void scissorsTest(){
+              //assertEquals(expected, actual);
+              Hand scissors = new Scissors();
+              System.out.println(scissors);
+              String expected = "    .-.\n    | |    / )\n    | |   / /\n    | |  / /\n _.-| |_/ /\n; \\( \\   /\n|\\_)\\ \\  |\n|    ) \\ |\n|   (    /\n \\______/";
+              assertEquals(expected, scissors.getAscii());
+          }
 
 
 ## Refining the architecture
 
-1. Which, if any, of these classes should be marked as abstract?
+1. Go back and look at your code with a critical eye.  Which, if any, of these classes should be marked as abstract?
 
-2. Look through your code again, and see if you can apply the DRY Principle. (Don't repeat yourself.)
+2. Can apply the DRY Principle to any part of your code? (Don't Repeat Yourself.)
