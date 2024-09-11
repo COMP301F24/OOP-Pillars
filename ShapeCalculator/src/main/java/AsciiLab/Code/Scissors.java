@@ -2,8 +2,11 @@ package AsciiLab.Code;
 
 public class Scissors extends Hand{
 
+    public Scissors(String name, String ascii){
+        super(name, ascii);
+    }
     public Scissors(){
-        super("Scissors",
+        this("Scissors",
                 "    .-.\n" +
                         "    | |    / )\n" +
                         "    | |   / /\n" +
