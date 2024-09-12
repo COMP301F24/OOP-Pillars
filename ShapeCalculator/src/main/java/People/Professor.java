@@ -24,5 +24,10 @@ public class Professor extends Person {
             return "Full";
         }
     }
+
+    @Override
+    public String getName(){
+      return "Prof " + super.getName();
+    }
 }
 
