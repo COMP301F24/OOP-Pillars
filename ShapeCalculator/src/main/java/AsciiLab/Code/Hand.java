@@ -1,6 +1,6 @@
 package AsciiLab.Code;
 
-public class Hand extends Ascii{
+public abstract class Hand extends Ascii{
     private String name;
 
     public Hand(String name, String ascii){
@@ -12,4 +12,9 @@ public class Hand extends Ascii{
     public String toString(){
         return this.name + "\n" + super.toString();
     }
+
+    @Override
+    public abstract boolean equals(Object other);
+
+    public abstract boolean firstPlayerWins(Hand other);
 }
