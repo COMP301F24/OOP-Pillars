@@ -1,8 +1,8 @@
 package Services;
 
 
-public class EmailService {
-    public void sendEmail(String message) {
-        System.out.println("Sending email: " + message);
+public class EmailService implements Service {
+    public String sendMessage(String message) {
+        return "Sending email: " + message;
     }
 }

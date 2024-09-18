@@ -1,9 +1,13 @@
 package Services;
 
 public class UserService {
-    private EmailService emailService = new EmailService();
+    private Service service;
 
-    public void notifyUser(String message) {
-        emailService.sendEmail(message);
+    public void setService(Service service){
+        this.service = service;
+    }
+
+    public String notifyUser(String message) {
+        return service.sendMessage(message);
     }
 }
